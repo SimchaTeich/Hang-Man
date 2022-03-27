@@ -2,55 +2,59 @@ from termcolor import colored
 
 GREEN = "green"
 
-hang_man_7_states = r"""picture 1:
+HANGMAN_PHOTOS = {
+0:r"""
+    x-------x""",
+1:r"""
     x-------x
+    |
+    |
+    |
+    |
+    |""",
 
-picture 2:
-    x-------x
-    |
-    |
-    |
-    |
-    |
-
-picture 3:
-    x-------x
-    |       |
-    |       0
-    |
-    |
-    |
-
-picture 4:
+2:r"""
     x-------x
     |       |
     |       0
+    |
+    |
+    |""",
+
+3:r"""
+    x-------x
+    |       |
+    |       0
     |       |
     |
-    |
+    |""",
 
-picture 5:
+4:r"""
     x-------x
     |       |
     |       0
     |      /|\
     |
-    |
+    |""",
 
-picture 6:
+5:r"""
     x-------x
     |       |
     |       0
     |      /|\
     |      /
-    |
+    |""",
 
-picture 7:
+6:r"""
     x-------x
     |       |
     |       0
     |      /|\
     |      / \
-    |"""
+    |"""}
 
-print(colored(hang_man_7_states, GREEN))
+def print_hangman(num_of_tries):
+    print(colored(HANGMAN_PHOTOS[num_of_tries], GREEN))
+
+print_hangman(6)
+
