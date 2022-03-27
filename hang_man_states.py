@@ -1,3 +1,7 @@
+from termcolor import colored
+
+GREEN = "green"
+
 hang_man_7_states = r"""picture 1:
     x-------x
 
@@ -49,4 +53,4 @@ picture 7:
     |      / \
     |"""
 
-print(hang_man_7_states)
+print(colored(hang_man_7_states, GREEN))
