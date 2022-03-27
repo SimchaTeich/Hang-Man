@@ -1,7 +1,9 @@
-secret_word = input("Please enter a word: ").lower()
-word_pattern = "_ " * len(secret_word)
+def choose_word(file_path, index):
+    words = []
+    with open(file_path, "r") as f:
+        words = f.read().split()
 
-# delete the last space
-word_pattern = word_pattern[:-1]
+    num_of_diff_words = len(list(dict.fromkeys(words)))
 
-print(word_pattern)
+    return num_of_diff_words, words[(index-1) % len(words)]
+
