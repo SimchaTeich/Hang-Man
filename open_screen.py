@@ -8,8 +8,8 @@ hang_man_open_screen = """  _    _
  |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
                       __/ |                      
                      |___/"""
-min_tries = 1
-max_tries = 6
+min_tries = 5
+max_tries = 10
 
 print(hang_man_open_screen)
 print(randint(min_tries, max_tries))
