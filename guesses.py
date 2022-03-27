@@ -13,10 +13,3 @@ def try_update_letter_guessed(letter_guessed, old_letters_guessed):
 
     return False
 
-old_letters = ['a', 'p', 'c', 'f']
-print(try_update_letter_guessed('A', old_letters))
-print(try_update_letter_guessed('s', old_letters))
-print(old_letters)
-print(try_update_letter_guessed('$', old_letters))
-print(try_update_letter_guessed('d', old_letters))
-print(old_letters)
