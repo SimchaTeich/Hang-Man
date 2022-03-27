@@ -178,10 +178,9 @@ def main():
             
             print(show_hidden_word(secret_word, old_letters_guessed))
     
-    if num_of_tries <= MAX_TRIES:
-        print("WIN")
-    else:
-        print("LOSE")
+    # final msg about win of the game
+    print("WIN") if num_of_tries <= MAX_TRIES else print("LOSE")
+
 
 if __name__ == "__main__":
     main()
