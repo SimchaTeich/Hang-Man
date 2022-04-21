@@ -117,11 +117,10 @@ def choose_word(file_path, index):
     from file of word at file_path,
     and the correct place index by index.
     """
-    words = []
     with open(file_path, "r") as f:
         words = f.read().split()
 
-    num_of_diff_words = len(list(dict.fromkeys(words)))
+    num_of_diff_words = len(set(words))
 
     return num_of_diff_words, words[(index-1) % len(words)]
 
